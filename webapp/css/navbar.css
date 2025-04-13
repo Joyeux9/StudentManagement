@@ -1,0 +1,50 @@
+/* Réinitialisation des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar avec un gradient */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style du logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Bouton de connexion */
+.btn-login {
+    text-decoration: none;
+    background: white;
+    color: #2575fc;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: #ffffff;
+    color: #6a11cb;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+.logout-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}

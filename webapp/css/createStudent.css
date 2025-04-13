@@ -1,0 +1,92 @@
+/* Appliquer flexbox au conteneur principal */
+.main-container {
+    display: flex;
+    gap: 50px; /* Espacement entre le menu latéral et le contenu */
+    padding: 30px;
+    margin-top: -20px;
+}
+
+/* Style du menu latéral */
+.sidebar {
+    width: 250px; /* Largeur fixe du menu latéral */
+    background-color: #f4f4f4; /* Couleur de fond */
+    padding: 15px;
+    border-radius: 10px;
+    
+}
+
+/* Style du conteneur principal */
+.container {
+    flex: 1; /* Prend tout l'espace disponible */
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Largeur maximale */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le titre et le formulaire */
+    text-align: center;
+}
+
+/* Style du titre */
+.container h2 {
+    font-size: 24px;
+    margin-bottom: 20px; /* Espacement sous le titre */
+}
+
+/* Style du formulaire */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacement entre les champs */
+    align-items: center; /* Centre les éléments */
+}
+
+/* Conteneur des champs */
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Style des labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style des inputs et selects */
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Bouton de soumission */
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 50%;
+    text-align: center;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Message de retour */
+.message {
+    font-size: 16px;
+    font-weight: bold;
+    color: green;
+    margin-bottom: 15px;
+}

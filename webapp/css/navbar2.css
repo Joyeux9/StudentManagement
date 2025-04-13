@@ -1,0 +1,54 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Partie gauche (titre) */
+.navbar-left h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Partie droite (boutons de connexion et déconnexion) */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Texte "Bienvenue, User" */
+.user-welcome {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Boutons */
+.btn-nav {
+    text-decoration: none;
+    background: white;
+    color: #2575fc;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    background: #ffffff;
+    color: #6a11cb;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+/*bouton Déconnexion */
+.logout {
+    display: inline-block !important; /* Force l'affichage du bouton */
+    visibility: visible !important;  /* Assure qu'il est visible */
+    background: #ff4d4d;
+    color: white;
+}

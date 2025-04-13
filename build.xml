@@ -1,0 +1,47 @@
+<project name="StudentManagement" default="build" basedir=".">
+    
+    <!-- Définition des propriétés -->
+    <property name="src" value="src"/>
+    <property name="build" value="build"/>
+    <property name="dist" value="dist"/>
+    <property name="webapp" value="Webapp"/>
+
+    <!-- Nettoyage des anciens fichiers -->
+    <target name="clean">
+        <delete dir="${build}"/>
+        <delete dir="${dist}"/>
+    </target>
+
+    <!-- Création du répertoire de compilation -->
+    <target name="init">
+        <mkdir dir="${build}"/>
+        <mkdir dir="${dist}"/>
+    </target>
+
+    <!-- Définition du classpath -->
+    <path id="classpath">
+        <fileset dir="lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <!-- Compilation du code Java avec encodage UTF-8 -->
+    <target name="compile" depends="init">
+        <javac srcdir="${src}" destdir="${build}" encoding="UTF-8" classpathref="classpath"/>
+    </target>
+
+    <!-- Génération du fichier .war -->
+    <target name="build" depends="compile">
+        <mkdir dir="${dist}"/>
+        <war destfile="${dist}/StudentManagement.war" webxml="${webapp}/WEB-INF/web.xml">
+            <fileset dir="${webapp}"/>
+            <classes dir="${build}"/>
+        </war>
+    </target>
+
+    <!-- Déploiement sur Tomcat -->
+    <target name="deploy" depends="build">
+        <copy file="${dist}/StudentManagement.war" todir="C:\tomcat-10\apache-tomcat-10.1.36\webapps"/>
+    </target>
+
+</project>

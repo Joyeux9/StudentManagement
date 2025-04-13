@@ -1,0 +1,63 @@
+/* 🎨 Global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Place les éléments l'un sous l'autre */
+}
+
+/* 🚀 Navbar */
+.navbar {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.logout-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background-color: darkred;
+}
+
+/* 📂 Conteneur principal */
+.main-container {
+    display: flex; /* Permet de placer la sidebar à gauche et le contenu à droite */
+    margin-top: 20px; /* Décale tout sous la navbar */
+}
+
+/* 📌 Contenu principal */
+/* 📌 Contenu principal */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px; /* Assure que le contenu ne chevauche pas la sidebar */
+    text-align: center; /* Centre le texte horizontalement */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+    height: 110px; /* Ajuste la hauteur pour placer le texte en haut */
+    margin-top: 20px; /* Décale un peu sous la navbar */
+}
+
