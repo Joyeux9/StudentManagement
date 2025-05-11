@@ -59,16 +59,23 @@
                         <td><%= etudiant.getNiveauActuel() %></td>
                         <td><%= etudiant.getNomdep() %></td>
                         <td>
-                            <div class="actions"> 
-                            <form action="AvancerEtudiantServlet" method="post" style="margin:0;">
+                            <form action="AvancerEtudiantServlet" method="post" style="margin:0;" onsubmit="return confirmerAvancement();">
                                 <input type="hidden" name="id_etudiant" value="<%= etudiant.getId_etudiant() %>">
-                                <input type="hidden" name="niveau_actuel" value="<%= etudiant.getNiveauActuel() %>">
+                                <input type="hidden" name="Niveau" value="<%= etudiant.getNiveauActuel() %>">
+                                <input type="hidden" name="retour" value="FSI">
                                 <% if (!"BAC4".equalsIgnoreCase(etudiant.getNiveauActuel())) { %>
                                     <button type="submit" class="Avancer">Avancer</button>
                                 <% } else { %>
                                     <span>Final</span>
                                 <% } %>
                             </form>
+                            
+                            <script>
+                            function confirmerAvancement() {
+                                return confirm("Voulez-vous vraiment avancer cet étudiant ?");
+                            }
+                            </script>
+                                
                             <form action="ModifierEtudiantServlet" method="post" style="margin:0;">
                                 <button type="submit" class="Modifier">Modifier</button>
                             </form>

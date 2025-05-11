@@ -8,7 +8,7 @@
 <body>
 <div class="sidebar">
     <a href="createStudent.jsp">Inscrire un Etudiant</a>
-    <a href="Avancer.jsp">avancer l'Etudiant</a>
+    <a href="AfficherHistoriqueServlet">Historique</a>
     <a href="TIC">TIC</a>
     <a href="FSI">FSI</a>
     <a href="FSE">FSE</a>

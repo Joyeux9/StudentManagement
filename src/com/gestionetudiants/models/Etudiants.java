@@ -14,6 +14,9 @@ public class Etudiants {
     private Date dateInscription;
     private String niveauActuel;
 
+    public Etudiants() {
+    }
+
     public Etudiants(int id_etudiant, String nom, String prenom, String genre, Date dateNaissance, double note,
             String nomfac, String nomdep, Date dateInscription, String niveauActuel) {
         this.id_etudiant = id_etudiant;
